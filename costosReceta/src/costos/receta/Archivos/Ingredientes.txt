@@ -1,5 +1,214 @@
-ing M,1000.0,g
-ing2,150.0,ml
-ing3,1000.0,l
-ing4,1500.0,kg
-ing M2,120.0,pzc
+Atún rojo,1865.0,c/u
+Aguacate,4210.0,Kg
+Mango,565.0,Kg
+Jugo de limón,1690.0,L
+Jengibre ,1590.0,Kg
+Salsa de soya,2100.0,c/u
+Aceite de sésamo,9510.0,L
+Pan tostado,1640.0,c/u
+Pulpo cocido,16365.0,Kg
+Sal,550.0,Kg
+Aceite de oliva,5950.0,L
+Alcaparras,1945.0,c/u
+Lechuga,370.0,c/u
+Queso parmesano,3160.0,c/u
+Crotones,2185.0,c/u
+Aderezo de ajo rostizado,1350.0,c/u
+Atún fresco,11000.0,Kg
+Tomate,1850.0,Kg
+Pepino,640.0,Kg
+Repollo morado,1150.0,Kg
+Semillas de sésamo,570.0,c/u
+Cebolla morada,2390.0,Kg
+Palmito,1695.0,c/u
+Aceitunas,1655.0,c/u
+Maíz dulce,1800.0,Kg
+Aderezo teriyaki,1695.0,c/u
+Pescado,4200.0,Kg
+Camarón,6450.0,Kg
+Pulpo,15400.0,Kg
+Piangua,5600.0,Kg
+Jugo de limón mesino,1600.0,L
+Jugo de limón mandarina,1800.0,L
+Ginger ale,1620.0,L
+Chile dulce,1540.0,Kg
+Culantro,350.0,c/u
+Caldo de mariscos,1500.0,L
+Calamar,1295.0,Kg
+Jaiba,2500.0,Kg
+Almeja,4500.0,Kg
+Mejillones,1695.0,Kg
+Ajo,1625.0,c/u
+Cebolla,1900.0,Kg
+Apio,1950.0,c/u
+Caldo de pollo,1500.0,L
+Chipotle,1535.0,c/u
+Aceite,1300.0,L
+Natilla,1700.0,c/u
+Tortillas fritas,1560.0,c/u
+Dados de queso,4195.0,c/u
+Caldo de frijoles,1500.0,c/u
+Pimienta,510.0,c/u
+Huevo duro,2500.0,c/u
+Dados de pollo,3500.0,c/u
+Zanahoria,890.0,Kg
+Vainica,2000.0,Kg
+Petit pois,910.0,c/u
+Brócoli,1640.0,Kg
+Mantequilla,835.0,c/u
+Crema dulce,1410.0,c/u
+Agua,0.0,L
+Pasta penne,960.0,c/u
+Salsa de tomate,800.0,L
+Albahaca,650.0,c/u
+Queso parmesano,3160.0,Kg
+Queso mozzarella,3430.0,Kg
+Pasta espagueti,580.0,c/u
+Carne molida de res,4800.0,Kg
+Orégano,190.0,c/u
+Queso,2650.0,Kg
+Jamón,2500.0,c/u
+Tocino,3630.0,c/u
+Hongos,520.0,Kg
+Camarón mediano,6500.0,Kg
+Vino blanco,5995.0,L
+Peperoncino picante,3200.0,c/u
+Pollo entero,2310.0,Kg
+Camarones,6500.0,Kg
+Pimienta negra,395.0,c/u
+Harina,830.0,Kg
+Panko,2765.0,Kg
+Huevo,2100.0,Kg
+Chips de plátano,1105.0,c/u
+Yuca frita,875.0,c/u
+Puré de papa,3500.0,c/u
+Coliflor,1550.0,Kg
+Salsa maracuyá,2600.0,c/u
+Salsa tártara,1420.0,L
+Salsa de cilantro,2500.0,L
+Chile habanero,1210.0,Kg
+Cilantro,500.0,c/u
+Mayonesa,1.5,c/u
+Pepinillos,2210.0,c/u
+Pepino ,500.0,Kg
+Salmón,4620.0,Kg
+Tomillo,650.0,c/u
+Perejil,890.0,c/u
+Espárragos,1500.0,Kg
+Tomate cherry,2100.0,Kg
+Atún,6500.0,Kg
+Sésamo tostado,2300.0,c/u
+Salsa teriyaki,3610.0,L
+Vegetales salteados,4210.0,Kg
+Repollo,990.0,Kg
+Aderezo chipotle,920.0,c/u
+Aderezo de ají amarillo,1230.0,c/u
+Papas fritas,1690.0,Kg
+Filet de pescado,4120.0,Kg
+Ají amarillo,860.0,c/u
+Arroz blanco,1895.0,Kg
+Maracuyá,2210.0,Kg
+Dedos de pescado,4850.0,Kg
+Azúcar,2200.0,Kg
+Vinagre,970.0,L
+Cebollino,1150.0,c/u
+Salsa blanca,3820.0,c/u
+Caldo de marisco,1750.0,L
+Camarón pequeño,6425.0,Kg
+Finas hierbas,1690.0,Kg
+Puré de papas,3500.0,Kg
+Vegetales,1930.0,Kg
+Pan molido,1000.0,Kg
+Pescado entero,7520.0,Kg
+Pescado entero sin espinas,8300.0,Kg
+Almejas,2410.0,Kg
+Jaiba,5660.0,Kg
+Pechuga de pollo,5585.0,Kg
+Vegetales mixtos,1930.0,Kg
+Arroz,1895.0,Kg
+Empanizador,575.0,Kg
+Ensalada,1750.0,Kg
+Salsa rosada,1195.0,c/u
+Dedos empanizados de pollo,4250.0,Kg
+Leche de coco,1960.0,L
+Chile panameño,820.0,c/u
+Patacón,2500.0,Kg
+Lomito de res,6800.0,Kg
+Salsa de tomate natural,800.0,L
+Espaguetis,580.0,c/u
+Vinagre rojo,1995.0,L
+Ostión,7450.0,Kg
+Tortillas,920.0,Kg
+Frijoles molidos,1000.0,c/u
+Arándanos,2140.0,Kg
+Salsa de carne,800.0,L
+Vino tinto,5995.0,L
+Caldo de res,1500.0,L
+Filete de res,5800.0,Kg
+Tocineta,6595.0,Kg
+Pienta mignonette,890.0,c/u
+Demiglas,3200.0,c/u
+Queso gorgonzola,6500.0,Kg
+Chuleta de cerdo,4990.0,Kg
+Maduro,415.0,c/u
+Costilla de cerdo,4560.0,Kg
+Salsa barbacoa,2150.0,L
+Churrasco,8625.0,Kg
+Chimichurri,2260.0,c/u
+Lomito,6800.0,Kg
+Punta de solomo,6000.0,Kg
+Lomo de res,6500.0,Kg
+Jengibre,1590.0,Kg
+Salsa de ostión,4600.0,L
+Puntas de lomito,5840.0,Kg
+Achiote,590.0,c/u
+Arroz arborio,1820.0,Kg
+Crema huancaína,2700.0,c/u
+Lechón,6500.0,Kg
+Ajinomoto,850.0,c/u
+Salsa inglesa,930.0,L
+Tinta de calamar,7300.0,L
+Calamar ,1295.0,Kg
+Frijoles enteros,1915.0,Kg
+Ensalada mixta,1675.0,Kg
+Queso blanco,2650.0,Kg
+Tortilla,920.0,Kg
+Pan para hamburguesa,1400.0,c/u
+Carne de res molida,4800.0,Kg
+Queso cheddar,1980.0,Kg
+Pan tipo panini,4530.0,c/u
+Carne de res,5600.0,Kg
+Salsa,1300.0,L
+Aderezo,1200.0,L
+Plátano verde,270.0,c/u
+Aceite vegetal,1590.0,L
+Papas,1990.0,Kg
+Jalapeño ,480.0,c/u
+Harina de almendra,4275.0,Kg
+Frutos rojos,5200.0,Kg
+Agar,12000.0,Kg
+Galleta María,1210.0,c/u
+Queso crema,1250.0,c/u
+Leche condensada,1220.0,c/u
+Pulpa de maracuyá,2590.0,L
+Gelatina,570.0,c/u
+Dulce de leche,2380.0,c/u
+Chocolate,1560.0,c/u
+Vainilla,1320.0,L
+Coco seco rayado,620.0,Kg
+Harina de trigo,970.0,Kg
+Papas para freír,180.0,Kg
+Pasta de espagueti,770.0,Kg
+Piña natural,825.0,Kg
+Hielo,1100.0,Kg
+Papaya natural,425.0,Kg
+Hojas de hierbabuena,915.0,c/u
+Sandía natural,1500.0,Kg
+Té,1800.0,c/u
+Fresa natural,2200.0,Kg
+Tamarindo natural,1000.0,c/u
+Papaya,425.0,Kg
+Banano,850.0,Kg
+Piña,825.0,c/u
+Jugo de naranja natural,2100.0,L
+Leche,1150.0,L

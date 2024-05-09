@@ -4,7 +4,7 @@
  */
 package costos.receta;
 
-import static costos.receta.interfazTotal.ingredientes;
+
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -17,7 +17,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Pablo
  */
-public final class Modificar extends javax.swing.JFrame {
+public final class Eliminar extends javax.swing.JFrame {
 
     /**
      * Creates new form Modificar
@@ -30,7 +30,7 @@ public final class Modificar extends javax.swing.JFrame {
                 return false;
             }
         };
-    public Modificar(int selec) {
+    public Eliminar(int selec) {
         initComponents();
         ingredientes = new ArrayList<>();
         CargarListaIngredientes();
@@ -45,6 +45,7 @@ public final class Modificar extends javax.swing.JFrame {
             Costo.setText(String.valueOf(seleccionado.getCostoPorUnidad()));
             Unidad.setText(seleccionado.getUnidad());
         }
+        
         
     }
      void actualizarcombobox(){
@@ -84,19 +85,23 @@ public final class Modificar extends javax.swing.JFrame {
 
         jLabel3.setText("Costo por unidad");
 
+        Ingre.setEnabled(false);
         Ingre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 IngreActionPerformed(evt);
             }
         });
 
+        Unidad.setEnabled(false);
         Unidad.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 UnidadActionPerformed(evt);
             }
         });
 
-        jButton1.setText("Guardar");
+        Costo.setEnabled(false);
+
+        jButton1.setText("Eliminar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -201,9 +206,8 @@ public final class Modificar extends javax.swing.JFrame {
             bufferedWriter.close();
             bufferedWriter2.close();
 
-           
         } catch (IOException e) {
-            showMessageDialog(null,"Error al escribir en el archivo: " + e.getMessage());
+           showMessageDialog(null,"Error al escribir en el archivo: " + e.getMessage());
         }
         
         
@@ -222,7 +226,7 @@ public final class Modificar extends javax.swing.JFrame {
 
             
         } catch (IOException e) {
-           showMessageDialog(null,"Error al borrar el contenido del archivo: " + e.getMessage());
+            showMessageDialog(null,"Error al borrar el contenido del archivo: " + e.getMessage());
         }
     }
 
@@ -235,31 +239,30 @@ public final class Modificar extends javax.swing.JFrame {
     }
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        if(Costo.getText().isEmpty()){
+         if(Costo.getText().isEmpty()){
              showMessageDialog(null, "la cantidad no puede ser vacio");
          }
          else if(!isInteger(Costo.getText())){
             showMessageDialog(null, "la cantidad debe ser un numero ");
+        }else{
+           Ingrediente seleccionado;
+           seleccionado=buscarIng(model2.getValueAt(tabla2.getSelectedRow(),0).toString());
+           ingredientes.remove(seleccionado);
+           model2.removeRow(tabla2.getSelectedRow());
+
+            String rutaArchivo ="src/costos/receta/Archivos/Ingredientes.txt";
+           //para que lo guarde tambien en el build
+           String rutaArchivo2 ="build/classes/costos/receta/Archivos/Ingredientes.txt";
+           BorrarContenidoArchivo(rutaArchivo);
+           BorrarContenidoArchivo(rutaArchivo2);
+           guardarInfoNueva();
+           interfazTotal.getIngredientes().clear();
+           interfazTotal.CargarListaIngredientes();
+           interfazTotal.actualizarcombobox();
+
+           actualizarcombobox();
+           showMessageDialog(null,"Eliminado con exito");
         }
-         else{
-        Ingrediente seleccionado;
-        seleccionado=buscarIng(model2.getValueAt(tabla2.getSelectedRow(),0).toString());
-        seleccionado.setNombre(Ingre.getText());
-        seleccionado.setCostoPorUnidad(Double.parseDouble(Costo.getText()));
-        seleccionado.setUnidad(Unidad.getText());
-         String rutaArchivo ="src/costos/receta/Archivos/Ingredientes.txt";
-        //para que lo guarde tambien en el build
-        String rutaArchivo2 ="build/classes/costos/receta/Archivos/Ingredientes.txt";
-        BorrarContenidoArchivo(rutaArchivo);
-        BorrarContenidoArchivo(rutaArchivo2);
-        guardarInfoNueva();
-        interfazTotal.getIngredientes().clear();
-        interfazTotal.CargarListaIngredientes();
-        interfazTotal.actualizarcombobox();
-        
-        actualizarcombobox();
-        showMessageDialog(null,"Cambios guardados");
-         }
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -275,7 +278,6 @@ public final class Modificar extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jScrollPane1MouseClicked
 public static void CargarListaIngredientes(){
-        
         try (Scanner myReader = new Scanner(interfazTotal.class.getResourceAsStream("Archivos/Ingredientes.txt"))) {
             while (myReader.hasNextLine()) {
                 String Ing= myReader.nextLine();

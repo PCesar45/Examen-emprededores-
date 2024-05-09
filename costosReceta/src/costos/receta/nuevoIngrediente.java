@@ -41,7 +41,6 @@ public class nuevoIngrediente extends javax.swing.JFrame {
         Unidad = new javax.swing.JTextField();
         Costo = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -75,8 +74,6 @@ public class nuevoIngrediente extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setText("Cancelar");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -99,8 +96,6 @@ public class nuevoIngrediente extends javax.swing.JFrame {
                 .addContainerGap(22, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton1)
                 .addContainerGap())
         );
@@ -120,9 +115,7 @@ public class nuevoIngrediente extends javax.swing.JFrame {
                     .addComponent(jLabel3)
                     .addComponent(Costo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 122, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
+                .addComponent(jButton1)
                 .addGap(15, 15, 15))
         );
 
@@ -149,9 +142,9 @@ public class nuevoIngrediente extends javax.swing.JFrame {
             bufferedWriter.close();
             bufferedWriter2.close();
 
-            System.out.println("Texto agregado al final del archivo.");
+            
         } catch (IOException e) {
-            System.out.println("Error al escribir en el archivo: " + e.getMessage());
+            showMessageDialog(null,"Error al escribir en el archivo: " + e.getMessage());
         }
         
         
@@ -170,11 +163,7 @@ public class nuevoIngrediente extends javax.swing.JFrame {
         showMessageDialog(null, "Guardado");
 
         interfazTotal.getIngredientes().clear();
-        System.out.println("a");
-        System.out.println(interfazTotal.getIngredientes().size());
         interfazTotal.CargarListaIngredientes();
-        System.out.println("b");
-        System.out.println(interfazTotal.getIngredientes().size());
         interfazTotal.actualizarcombobox();
       
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -189,7 +178,6 @@ public class nuevoIngrediente extends javax.swing.JFrame {
     private javax.swing.JTextField Ingre;
     private javax.swing.JTextField Unidad;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
