@@ -5,9 +5,14 @@
 package costos.receta;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Scanner;
 import static javax.swing.JOptionPane.showMessageDialog;
+import javax.swing.RowSorter;
+import javax.swing.SortOrder;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableRowSorter;
 
 /**
  *
@@ -42,15 +47,23 @@ public final class interfazTotal extends javax.swing.JFrame {
         model.addColumn("Total");
         model2.addColumn("Ingrediente");
         model2.addColumn("Costo");
-        
+        ordenarPorNombre();
    
         actualizarcombobox();
        
         
         
        
+        
+        
+       
     }
+    public static void ordenarPorNombre() {
+        Collections.sort(ingredientes);
+    }
+
     static void actualizarcombobox(){
+        ordenarPorNombre();
         // Remove all rows from the table
         model2.setRowCount(0);
 
@@ -148,8 +161,8 @@ public final class interfazTotal extends javax.swing.JFrame {
 
         tabla2.setModel(model2);
         tabla2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        tabla2.setSelectionMode(javax.swing.ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
-        tabla2.setSelectionMode(javax.swing.ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+        tabla2.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        tabla2.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         tabla2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tabla2MouseClicked(evt);
@@ -206,9 +219,7 @@ public final class interfazTotal extends javax.swing.JFrame {
                                             .addComponent(cant, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(unidad))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jButton1)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                    .addComponent(jButton1))
                                 .addGap(18, 18, 18)
                                 .addComponent(Panel, javax.swing.GroupLayout.PREFERRED_SIZE, 474, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -271,7 +282,7 @@ public final class interfazTotal extends javax.swing.JFrame {
     public boolean isInteger(String cadena){
         boolean contieneSoloNumeros = true;
         for (char c : cadena.toCharArray()) {
-            if (!Character.isDigit(c)) {
+            if (!Character.isDigit(c)&&c!='.') {
                 contieneSoloNumeros = false;
                 break;
             }

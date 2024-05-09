@@ -8,7 +8,7 @@ package costos.receta;
  *
  * @author Pablo
  */
-public class Ingrediente {
+public class Ingrediente implements Comparable<Ingrediente>{
     private String nombre;
     private double costoPorUnidad; // Costo por unidad
     private String unidad;
@@ -47,6 +47,9 @@ public class Ingrediente {
     public void setUnidad(String unidad) {
         this.unidad = unidad;
     }
-    
+     @Override
+    public int compareTo(Ingrediente otro) {
+        return this.nombre.compareTo(otro.getNombre());
+    }
     
 }

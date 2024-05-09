@@ -156,15 +156,32 @@ public class nuevoIngrediente extends javax.swing.JFrame {
     private void UnidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UnidadActionPerformed
         
     }//GEN-LAST:event_UnidadActionPerformed
- 
+    public boolean isInteger(String cadena){
+        boolean contieneSoloNumeros = true;
+        for (char c : cadena.toCharArray()) {
+            if (!Character.isDigit(c)&&c!='.') {
+                contieneSoloNumeros = false;
+                break;
+            }
+        }
+        return contieneSoloNumeros;
+    }
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       String ingredient=Ingre.getText()+","+Costo.getText()+","+Unidad.getText()+"\n";
-        Guardar_en_el_archivo(ingredient);
-        showMessageDialog(null, "Guardado");
+        if(Costo.getText().isEmpty()){
+             showMessageDialog(null, "la cantidad no puede ser vacio");
+         }
+         else if(!isInteger(Costo.getText())){
+            showMessageDialog(null, "la cantidad debe ser un numero ");
+        }
+         else{
+            String ingredient=Ingre.getText()+","+Costo.getText()+","+Unidad.getText()+"\n";
+            Guardar_en_el_archivo(ingredient);
+            showMessageDialog(null, "Guardado");
 
-        interfazTotal.getIngredientes().clear();
-        interfazTotal.CargarListaIngredientes();
-        interfazTotal.actualizarcombobox();
+            interfazTotal.getIngredientes().clear();
+            interfazTotal.CargarListaIngredientes();
+            interfazTotal.actualizarcombobox();
+         }
       
     }//GEN-LAST:event_jButton1ActionPerformed
 

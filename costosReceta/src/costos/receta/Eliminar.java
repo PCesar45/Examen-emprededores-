@@ -5,13 +5,18 @@
 package costos.receta;
 
 
+import static costos.receta.Modificar.ingredientes;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 import static javax.swing.JOptionPane.showMessageDialog;
+import javax.swing.RowSorter;
+import javax.swing.SortOrder;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableRowSorter;
 
 /**
  *
@@ -34,7 +39,7 @@ public final class Eliminar extends javax.swing.JFrame {
         initComponents();
         ingredientes = new ArrayList<>();
         CargarListaIngredientes();
-        
+        ordenarPorNombre();
         model2.addColumn("Ingrediente");
         model2.addColumn("Costo");
         actualizarcombobox();
@@ -48,7 +53,11 @@ public final class Eliminar extends javax.swing.JFrame {
         
         
     }
+   public static void ordenarPorNombre() {
+        Collections.sort(ingredientes);
+    }
      void actualizarcombobox(){
+         ordenarPorNombre();
          // Remove all rows from the table
         model2.setRowCount(0);
 
@@ -56,6 +65,7 @@ public final class Eliminar extends javax.swing.JFrame {
         for (int i = 0; i < ingredientes.size(); i++) {
              model2.addRow(new Object[]{ingredientes.get(i).getNombre(),String.valueOf(ingredientes.get(i).getCostoPorUnidad())}); 
         }
+        
          
      }
     /**
@@ -292,7 +302,7 @@ public static void CargarListaIngredientes(){
     public boolean isInteger(String cadena){
         boolean contieneSoloNumeros = true;
         for (char c : cadena.toCharArray()) {
-            if (!Character.isDigit(c)) {
+            if (!Character.isDigit(c)&&c!='.') {
                 contieneSoloNumeros = false;
                 break;
             }
